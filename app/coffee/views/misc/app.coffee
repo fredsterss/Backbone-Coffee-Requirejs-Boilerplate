@@ -19,6 +19,8 @@ define [
             @currentView = view
             @currentView.render()
 
+            console.log(@currentView)
+
             $('#page').html(@currentView.el)
 
     AppView

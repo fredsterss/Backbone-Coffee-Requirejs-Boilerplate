@@ -3,7 +3,7 @@
   var __hasProp = {}.hasOwnProperty,
     __extends = function(child, parent) { for (var key in parent) { if (__hasProp.call(parent, key)) child[key] = parent[key]; } function ctor() { this.constructor = child; } ctor.prototype = parent.prototype; child.prototype = new ctor(); child.__super__ = parent.prototype; return child; };
 
-  define(["jquery", "backbone", "views/misc/app", "models/UserModel", "views/UserView", "collections/UsersCollection"], function($, Backbone, AppView, UserModel, UserView, UsersCollection) {
+  define(["jquery", "backbone", "views/misc/app", "views/home/main"], function($, Backbone, AppView, DefaultView) {
     var Router;
     return Router = (function(_super) {
 
@@ -15,9 +15,12 @@
 
       Router.prototype.initialize = function() {
         var enablePushState, pushState;
+        this.appView = new AppView;
         enablePushState = true;
         pushState = !!(enablePushState && window.history && window.history.pushState);
-        return Backbone.history.start();
+        return Backbone.history.start({
+          pushState: pushState
+        });
       };
 
       Router.prototype.routes = {
@@ -25,18 +28,9 @@
       };
 
       Router.prototype.home = function() {
-        var mainView, user, users;
-        user = new UserModel().set({
-          firstname: "Greg",
-          lastname: "Franko",
-          email: "example@gmail.com",
-          phone: "703-243-7371"
-        });
-        users = new UsersCollection([user]);
-        mainView = new UserView({
-          collection: users
-        });
-        return mainView.render();
+        var defaultView;
+        defaultView = new DefaultView;
+        return this.appView.showView(defaultView);
       };
 
       Router;
