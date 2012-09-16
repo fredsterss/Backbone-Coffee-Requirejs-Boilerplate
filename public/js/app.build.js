@@ -5,7 +5,7 @@
   dir: "../js-optimized",
 
   // Tells Require.js to look at desktop.js for all shim and path configurations
-  mainConfigFile: 'desktop.js',
+  mainConfigFile: 'app.js',
 
   // Modules to be optimized:
   modules: [

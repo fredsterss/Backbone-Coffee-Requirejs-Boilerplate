@@ -3,7 +3,7 @@
   var __hasProp = {}.hasOwnProperty,
     __extends = function(child, parent) { for (var key in parent) { if (__hasProp.call(parent, key)) child[key] = parent[key]; } function ctor() { this.constructor = child; } ctor.prototype = parent.prototype; child.prototype = new ctor(); child.__super__ = parent.prototype; return child; };
 
-  define(["jquery", "backbone", "models/UserModel", "views/UserView", "collections/UsersCollection"], function($, Backbone, UserModel, UserView, UsersCollection) {
+  define(["jquery", "backbone", "views/misc/app", "models/UserModel", "views/UserView", "collections/UsersCollection"], function($, Backbone, AppView, UserModel, UserView, UsersCollection) {
     var Router;
     return Router = (function(_super) {
 
@@ -14,6 +14,9 @@
       }
 
       Router.prototype.initialize = function() {
+        var enablePushState, pushState;
+        enablePushState = true;
+        pushState = !!(enablePushState && window.history && window.history.pushState);
         return Backbone.history.start();
       };
 
