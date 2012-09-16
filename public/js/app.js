@@ -8,7 +8,9 @@
       bootstrap: "plugins/bootstrap",
       underscore: "libs/lodash",
       backbone: "libs/backbone",
-      "backbone.validateAll": "plugins/Backbone.validateAll"
+      "backbone.validateAll": "plugins/Backbone.validateAll",
+      hbs: "libs/hbs",
+      Handlebars: "libs/Handlebars"
     },
     shim: {
       bootstrap: ["jquery"],
@@ -16,14 +18,14 @@
         deps: ["underscore", "jquery"],
         exports: "Backbone"
       },
-      "backbone.validateAll": ["backbone"],
-      hbs: {
-        helperPathCallback: function(name) {
-          return "helpers/all";
-        },
-        templateExtension: "hbs",
-        disableI18n: true
-      }
+      "backbone.validateAll": ["backbone"]
+    },
+    hbs: {
+      helperPathCallback: function(name) {
+        return "helpers/all";
+      },
+      templateExtension: "hbs",
+      disableI18n: true
     }
   });
 
