@@ -19,16 +19,6 @@
         return Router.__super__.constructor.apply(this, arguments);
       }
 
-      Router.prototype.initialize = function() {
-        var enablePushState, pushState;
-        this.appView = new AppView;
-        enablePushState = true;
-        pushState = !!(enablePushState && window.history && window.history.pushState);
-        return Backbone.history.start({
-          pushState: pushState
-        });
-      };
-
       Router.prototype.routes = {
         "": "home"
       };
@@ -37,6 +27,16 @@
         var exampleView;
         exampleView = new ExampleView;
         return this.appView.showView(exampleView);
+      };
+
+      Router.prototype.initialize = function() {
+        var enablePushState, pushState;
+        this.appView = new AppView;
+        enablePushState = true;
+        pushState = !!(enablePushState && window.history && window.history.pushState);
+        return Backbone.history.start({
+          pushState: pushState
+        });
       };
 
       Router;
