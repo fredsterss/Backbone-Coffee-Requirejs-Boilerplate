@@ -20,7 +20,6 @@ define [
             # Tells Backbone to start watching for hashchange events
             Backbone.history.start({pushState: pushState})
 
-
         
         # All of your Backbone Routes (add more)
         routes:
