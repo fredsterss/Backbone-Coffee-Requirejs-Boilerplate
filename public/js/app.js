@@ -10,7 +10,8 @@
       backbone: "libs/backbone",
       "backbone.validateAll": "plugins/Backbone.validateAll",
       hbs: "libs/hbs",
-      Handlebars: "libs/Handlebars"
+      Handlebars: "libs/Handlebars",
+      templates: "../templates"
     },
     shim: {
       bootstrap: ["jquery"],

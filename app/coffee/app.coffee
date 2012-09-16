@@ -13,6 +13,7 @@ require.config
         "backbone.validateAll": "plugins/Backbone.validateAll"
         hbs: "libs/hbs"
         Handlebars: "libs/Handlebars"
+        templates: "../templates"
 
   
     # Sets the configuration for your third party scripts that are not AMD compatible

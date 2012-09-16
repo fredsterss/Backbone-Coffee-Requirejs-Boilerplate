@@ -2,8 +2,8 @@ define [
     "jquery"
     "backbone"
     "views/misc/app"
-    "views/home/main"
-    ], ($, Backbone, AppView, DefaultView) ->
+    "views/home/eg"
+    ], ($, Backbone, AppView, ExampleView) ->
   
     class Router extends Backbone.Router
 
@@ -31,8 +31,8 @@ define [
 
         home: ->
 
-            defaultView = new DefaultView
-            @appView.showView(defaultView)
+            exampleView = new ExampleView
+            @appView.showView(exampleView)
 
 
         # Returns the Router class

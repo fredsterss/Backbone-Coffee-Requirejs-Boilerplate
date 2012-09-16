@@ -3,7 +3,7 @@
   var __hasProp = {}.hasOwnProperty,
     __extends = function(child, parent) { for (var key in parent) { if (__hasProp.call(parent, key)) child[key] = parent[key]; } function ctor() { this.constructor = child; } ctor.prototype = parent.prototype; child.prototype = new ctor(); child.__super__ = parent.prototype; return child; };
 
-  define(["jquery", "backbone", "views/misc/app", "views/home/main"], function($, Backbone, AppView, DefaultView) {
+  define(["jquery", "backbone", "views/misc/app", "views/home/eg"], function($, Backbone, AppView, ExampleView) {
     var Router;
     return Router = (function(_super) {
 
@@ -28,9 +28,9 @@
       };
 
       Router.prototype.home = function() {
-        var defaultView;
-        defaultView = new DefaultView;
-        return this.appView.showView(defaultView);
+        var exampleView;
+        exampleView = new ExampleView;
+        return this.appView.showView(exampleView);
       };
 
       Router;
