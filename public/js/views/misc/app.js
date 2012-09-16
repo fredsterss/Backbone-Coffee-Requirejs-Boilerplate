@@ -23,7 +23,6 @@
         }
         this.currentView = view;
         this.currentView.render();
-        console.log(this.currentView);
         return $('#page').html(this.currentView.el);
       };
 

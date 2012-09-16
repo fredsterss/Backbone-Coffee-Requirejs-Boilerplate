@@ -5,7 +5,6 @@
     paths: {
       modernizr: "libs/modernizr",
       jquery: "libs/jquery",
-      bootstrap: "plugins/bootstrap",
       underscore: "libs/lodash",
       backbone: "libs/backbone",
       "backbone.validateAll": "plugins/Backbone.validateAll",
@@ -14,7 +13,6 @@
       templates: "../templates"
     },
     shim: {
-      bootstrap: ["jquery"],
       backbone: {
         deps: ["underscore", "jquery"],
         exports: "Backbone"
@@ -30,7 +28,7 @@
     }
   });
 
-  require(["modernizr", "jquery", "backbone", "router", "bootstrap", "backbone.validateAll"], function(Modernizr, $, Backbone, Router) {
+  require(["modernizr", "jquery", "backbone", "router", "backbone.validateAll"], function(Modernizr, $, Backbone, Router) {
     return this.router = new Router();
   });
 

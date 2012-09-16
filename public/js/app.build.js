@@ -9,13 +9,8 @@
 
   // Modules to be optimized:
   modules: [
-
     {
-      name: "mobile"
-    },
-
-    {
-      name: "desktop"
+      name: "app"
     }
   ]
 

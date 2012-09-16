@@ -7,7 +7,6 @@ require.config
         # Core Libraries
         modernizr: "libs/modernizr"
         jquery: "libs/jquery"
-        bootstrap: "plugins/bootstrap"
         underscore: "libs/lodash"
         backbone: "libs/backbone"
         "backbone.validateAll": "plugins/Backbone.validateAll"
@@ -20,7 +19,6 @@ require.config
     shim:
 
         # Twitter Bootstrap jQuery plugins
-        bootstrap: ["jquery"]
         backbone:
             deps: ["underscore", "jquery"]
             exports: "Backbone" #attaches "Backbone" to the window object
@@ -44,7 +42,7 @@ require.config
 
 
 # Include Desktop Specific JavaScript files here (or inside of your Desktop router)
-require ["modernizr", "jquery", "backbone", "router", "bootstrap", "backbone.validateAll"], (Modernizr, $, Backbone, Router) ->
+require ["modernizr", "jquery", "backbone", "router", "backbone.validateAll"], (Modernizr, $, Backbone, Router) ->
 
     # Instantiates a new Router
     @router = new Router()

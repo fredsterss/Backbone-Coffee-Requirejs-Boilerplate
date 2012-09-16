@@ -19,8 +19,7 @@ define [
             @currentView = view
             @currentView.render()
 
-            console.log(@currentView)
-
+            # insert the view into the htmlz
             $('#page').html(@currentView.el)
 
     AppView
