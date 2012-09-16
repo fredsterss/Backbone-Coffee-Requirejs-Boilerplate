@@ -1,8 +1,9 @@
-define [ 
-    "jquery"
-    "underscore"
-    "backbone"
-], ($, _, Backbone) ->
+define (require) ->
+
+    $           = require 'jquery'
+    _           = require 'underscore'
+    Backbone    = require 'backbone'
+    ->
 
     class AppView extends Backbone.View
 

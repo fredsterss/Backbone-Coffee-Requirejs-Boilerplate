@@ -3,8 +3,14 @@
   var __hasProp = {}.hasOwnProperty,
     __extends = function(child, parent) { for (var key in parent) { if (__hasProp.call(parent, key)) child[key] = parent[key]; } function ctor() { this.constructor = child; } ctor.prototype = parent.prototype; child.prototype = new ctor(); child.__super__ = parent.prototype; return child; };
 
-  define(["jquery", "backbone", "views/misc/app", "views/home/eg"], function($, Backbone, AppView, ExampleView) {
-    var Router;
+  define(function(require) {
+    var $, AppView, Backbone, ExampleView, Router, _;
+    $ = require('jquery');
+    _ = require('underscore');
+    Backbone = require('backbone');
+    AppView = require('views/misc/app');
+    ExampleView = require('views/home/eg');
+    (function() {});
     return Router = (function(_super) {
 
       __extends(Router, _super);

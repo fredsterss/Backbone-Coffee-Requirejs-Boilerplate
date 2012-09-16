@@ -1,10 +1,12 @@
-define [
-    "jquery"
-    "backbone"
-    "views/misc/app"
-    "views/home/eg"
-    ], ($, Backbone, AppView, ExampleView) ->
-  
+define (require) ->
+
+    $           = require 'jquery'
+    _           = require 'underscore'
+    Backbone    = require 'backbone'
+    AppView     = require 'views/misc/app'
+    ExampleView = require 'views/home/eg'
+    ->
+
     class Router extends Backbone.Router
 
         initialize: ->
