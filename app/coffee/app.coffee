@@ -10,7 +10,7 @@ require.config
         underscore: "libs/lodash"
         backbone: "libs/backbone"
         "backbone.validateAll": "plugins/Backbone.validateAll"
-        hbs: "libs/hbs"
+        hbs: "libs/hbs" # hbs is how we deal with handlebars templatez
         Handlebars: "libs/Handlebars"
         templates: "../templates"
 

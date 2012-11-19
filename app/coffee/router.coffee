@@ -13,16 +13,14 @@ define (require) ->
         # All of your Backbone Routes (add more)
         routes:
 
-            # When there is no hash bang on the url, the home method is called
+            # When there is no url, the home method is called
             "": "home"
-
 
 
         home: ->
 
             exampleView = new ExampleView
             @appView.showView(exampleView)
-
 
 
         initialize: ->
