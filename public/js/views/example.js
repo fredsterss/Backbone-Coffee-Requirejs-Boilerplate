@@ -4,11 +4,11 @@
     __extends = function(child, parent) { for (var key in parent) { if (__hasProp.call(parent, key)) child[key] = parent[key]; } function ctor() { this.constructor = child; } ctor.prototype = parent.prototype; child.prototype = new ctor(); child.__super__ = parent.prototype; return child; };
 
   define(function(require) {
-    var $, Backbone, ExampleView, tmplTest, _;
+    var $, Backbone, ExampleView, tmplExample, _;
     $ = require('jquery');
-    _ = require('underscore');
+    _ = require('lodash');
     Backbone = require('backbone');
-    tmplTest = require('hbs!templates/test');
+    tmplExample = require('hbs!templates/example');
     (function() {});
     return ExampleView = (function(_super) {
 
@@ -18,16 +18,14 @@
         return ExampleView.__super__.constructor.apply(this, arguments);
       }
 
-      ExampleView.prototype.initialize = function(opts) {
-        return _.bindAll(this);
-      };
+      ExampleView.prototype.className = 'example';
 
       ExampleView.prototype.render = function() {
-        return this.$el.html(tmplTest());
+        this.$el.html(tmplExample({
+          thing: 'Some string'
+        }));
+        return this;
       };
-
-      ExampleView;
-
 
       return ExampleView;
 
